@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Dashboard Access</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      background-color: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+      color: #333;
+    }
+    .login-container small {
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+      color: #777;
+    }
+    .login-container label {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.3rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    .login-container .footer {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #888;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to View Dashboard</h2>
+    
+    <form onsubmit="handleLogin(event)">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required />
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">© 2025 Spring 2025 | All rights reserved by Yaswanth Gangula, Nobel Preet Kour Khehra, Krishna Dhara Syava. </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      alert("Login successful! Redirecting to dashboard...");
+      // window.location.href = '/dashboard.html';
+    }
+  </script>
+</body>
+</html>
